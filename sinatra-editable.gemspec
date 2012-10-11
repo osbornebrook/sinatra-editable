@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.email = "robert@osbornebrook.co.uk"
 
   s.add_development_dependency 'sinatra'
-  s.add_development_dependency 'redcloth'  
+  s.add_development_dependency 'RedCloth'  
   
   s.files = FileList['lib/**/*.rb', 'bin/*', '[A-Z]*', 'test/**/*'].to_a
 end
