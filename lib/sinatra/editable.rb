@@ -4,7 +4,7 @@ module Sinatra
   module Editable
 
     module Helpers
-      def editable(item, encoding = "UTF-8")
+      def editable(item, encoding = "r:utf-8")
         path = "#{settings.root}/#{settings.editable_dir}/#{item.to_s}.html"
         if editable_exist?(item)
           File.read(path, encoding)
