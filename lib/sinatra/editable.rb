@@ -7,7 +7,10 @@ module Sinatra
       def editable(item, encoding = "r:utf-8")
         path = "#{settings.root}/#{settings.editable_dir}/#{item.to_s}.html"
         if editable_exist?(item)
-          File.read(path, encoding)
+          f = File.open(path, encoding)
+          content = f.read
+          f.close
+          content
         end
       end
 
