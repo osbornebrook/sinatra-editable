@@ -26,11 +26,15 @@ module Sinatra
       app.set :editable_route,     '/editable'
       app.set :editable_dir,       'editable'
       app.set :editable_templater, :html
+      app.set :editable_encoding, 'r:utf-8'
 
       app.get "#{app.editable_route}/*" do
         path = "#{settings.root}/#{settings.editable_dir}/#{params[:splat].shift}.#{settings.editable_templater}"
         if File.exist?(path)
-          File.read(path)
+          f = File.open(path, settings.editable_encoding)
+          content = f.read
+          f.close
+          content
         else
           'new editable item..'
         end
