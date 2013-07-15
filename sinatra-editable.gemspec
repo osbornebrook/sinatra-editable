@@ -5,16 +5,16 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
 
   s.name = 'sinatra-editable'
-  s.version = '0.0.3'
-  s.date = '2010-04-20'
+  s.version = '0.0.4'
+  s.date = '2013-07-15'
 
-  s.author = "Robert Crim"
+  s.author = "Osborne Brook"
 
   s.description = "A simple CMS extension for sinatra"
   s.summary     = "A simple CMS extension for sinatra"
 
-  s.homepage = "http://github.com/ottbot/sinatra-editable"
-  s.email = "robert@osbornebrook.co.uk"
+  s.homepage = "http://github.com/osbornebrook/sinatra-editable"
+  s.email = "team@osbornebrook.co.uk"
 
   s.add_development_dependency 'sinatra'
   s.add_development_dependency 'RedCloth'  
